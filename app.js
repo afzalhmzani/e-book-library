@@ -18,7 +18,7 @@ var cloudant;
 var fileToUpload;
 
 var dbCredentials = {
-    dbName: 'my_sample_db'
+    dbName: 'e_book_library_db'//'my_sample_db'
 };
 
 var bodyParser = require('body-parser');
@@ -138,6 +138,9 @@ var saveDocument = function(id, name, value, response) {
     });
 
 }
+const viewUrl ="_design/all_books/_view/all";
+
+
 
 app.get('/api/favorites/attach', function(request, response) {
     var doc = request.query.id;
